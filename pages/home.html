@@ -1,0 +1,29 @@
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <h4>Forecast by City</h4>
+        <div class="form-group">
+            <input type="text" ng-model="city" class="form-control" />
+        </div>
+        <a href="#/forecast" class="btn btn-primary">Get Forecast</a>
+    </div>
+</div>
+
+
+<!--<h4>Asynchronous results</h4>
+    <pre>Model: {{asyncSelected | json}}</pre>
+    <input type="text" ng-model="asyncSelected" placeholder="Locations loaded via $http"
+    uib-typeahead="address for address in getLocation($viewValue)"
+    typeahead-loading="loadingLocations" typeahead-no-results="noResults" class="form-control">
+    <i ng-show="loadingLocations" class="glyphicon glyphicon-refresh"></i>
+    <div ng-show="noResults">
+      <i class="glyphicon glyphicon-remove"></i> No Results Found
+    </div>-->
+
+    <div class="row">
+        <div class="col-xs-8">
+           Find your Category:
+            <input class="form-control" type="text" name="category" id="category" placeholder="Search..." ng-model="asyncSelected" typeahead="obj.name for obj in getCdOnCat($viewValue)" typeahead-loading="loadingLocations">
+        </div>
+        <div class="col-xs-4"> <p>Selected: <br/>{{asyncSelected}}</div>
+      </div>
+
